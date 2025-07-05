@@ -1,3 +1,6 @@
+import React from "react";
+import "./App.css";
+
 function Header() {
   let [expanded, setExpanded] = React.useState(false);
   let [toggled, setToggled] = React.useState(false);
@@ -424,12 +427,11 @@ function Main() {
   );
 }
 
-setTimeout(() => {
-  const root = ReactDOM.createRoot(document.getElementById("app"));
-  root.render(
+export default function App() {
+  return (
     <>
       <Header />
       <Main />
     </>
   );
-}, 100);
+}
